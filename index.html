@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=402, initial-scale=1, viewport-fit=cover">
+  <title>Мобиль</title>
+  <style>
+    :root {
+      --bg: #111111;
+      --accent: #ff4d06;
+      --text: #ffffff;
+      --canvas: 402px;
+      --outer-pad: 16px;
+      --card-gap: 28px;
+      --card-radius: 14px;
+      --card-height: 114px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      width: 402px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .page {
+      width: var(--canvas);
+      min-height: 100vh;
+      padding: 18px var(--outer-pad) 56px;
+      background: var(--bg);
+    }
+
+    .mark {
+      width: 43px;
+      height: 37px;
+      display: block;
+      margin-bottom: 46px;
+    }
+
+    .title {
+      width: 370px;
+      height: 64px;
+      display: block;
+      margin: 0 0 45px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--card-gap);
+    }
+
+    .card {
+      position: relative;
+      height: var(--card-height);
+      background: var(--accent);
+      border-radius: var(--card-radius);
+      padding: 10px 12px;
+      overflow: hidden;
+    }
+
+    .card__index {
+      position: absolute;
+      top: 8px;
+      left: 12px;
+      font-size: 13px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .card__formula {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 700;
+      padding-top: 8px;
+    }
+
+    sup {
+      font-size: 0.62em;
+      vertical-align: super;
+    }
+
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img
+      class="mark"
+      src="./logo-mark.png"
+      srcset="./logo-mark@2x.png 2x, ./logo-mark@3x.png 3x"
+      width="43"
+      height="37"
+      alt=""
+      aria-hidden="true"
+    >
+
+    <img
+      class="title"
+      src="./logo-title.png"
+      srcset="./logo-title@2x.png 2x, ./logo-title@3x.png 3x"
+      width="370"
+      height="64"
+      alt="Мобиль"
+    >
+
+    <section class="grid" aria-label="Список заданий">
+      <article class="card"><div class="card__index">1</div><div class="card__formula">6.5 x 4.2 =</div></article>
+      <article class="card"><div class="card__index">2</div><div class="card__formula">√(5<sup>2</sup> + 12<sup>2</sup>) =</div></article>
+      <article class="card"><div class="card__index">3</div><div class="card__formula">1.25 × 0.03 =</div></article>
+      <article class="card"><div class="card__index">4</div><div class="card__formula">1.8 × 0.05 =</div></article>
+      <article class="card"><div class="card__index">5</div><div class="card__formula">2.8 × 350 =</div></article>
+      <article class="card"><div class="card__index">6</div><div class="card__formula">√(6<sup>2</sup> + 2.5<sup>2</sup>) =</div></article>
+      <article class="card"><div class="card__index">7</div><div class="card__formula">√81 + √16 =</div></article>
+      <article class="card"><div class="card__index">8</div><div class="card__formula">√(10<sup>2</sup> + 24<sup>2</sup>) =</div></article>
+      <article class="card"><div class="card__index">9</div><div class="card__formula">√(8<sup>2</sup> + 6<sup>2</sup>) =</div></article>
+      <article class="card"><div class="card__index">10</div><div class="card__formula">2.8 × 350 =</div></article>
+      <article class="card"><div class="card__index">11</div><div class="card__formula">2<sup>3</sup> + 3<sup>2</sup> =</div></article>
+      <article class="card"><div class="card__index">12</div><div class="card__formula">√(8<sup>2</sup> + 6<sup>2</sup>) =</div></article>
+      <article class="card"><div class="card__index">13</div><div class="card__formula">√400 ÷ 2 =</div></article>
+      <article class="card"><div class="card__index">14</div><div class="card__formula">7<sup>3</sup> − 300 =</div></article>
+      <article class="card"><div class="card__index">15</div><div class="card__formula">4<sup>3</sup> + 6<sup>2</sup> =</div></article>
+      <article class="card"><div class="card__index">16</div><div class="card__formula">√(15<sup>2</sup> + 8<sup>2</sup>) =</div></article>
+    </section>
+  </main>
+</body>
+</html>
