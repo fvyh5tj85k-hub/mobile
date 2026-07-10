@@ -234,11 +234,11 @@
 
     const formulaNode = document.getElementById("formula");
     const params = new URLSearchParams(window.location.search);
-    const requestedId = Number.parseInt(params.get("id") || "1", 10);
-    const safeId = Number.isInteger(requestedId) && requestedId >= 1 && requestedId <= equations.length
-      ? requestedId
-      : 1;
-    const selectedEquation = equations[safeId - 1];
+    const requestedId = Number.parseInt(params.get("id") || "", 10);
+    const hasExplicitId = Number.isInteger(requestedId) && requestedId >= 1 && requestedId <= equations.length;
+    const randomId = Math.floor(Math.random() * equations.length) + 1;
+    const selectedId = hasExplicitId ? requestedId : randomId;
+    const selectedEquation = equations[selectedId - 1];
 
     formulaNode.textContent = selectedEquation;
     formulaNode.classList.toggle("card__formula--compact", selectedEquation.length > 16);
